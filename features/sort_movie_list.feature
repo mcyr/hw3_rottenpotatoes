@@ -24,8 +24,12 @@ Background: movies have been added to database
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
   # your steps here
+  Then I should be on the RottenPotatoes home page
+  And I should see "Amelie" before "The Terminator"
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
   # your steps here
+  Then I should be on the RottenPotatoes home page
+  And I should see "1989-07-21" before "2004-11-05"
 
